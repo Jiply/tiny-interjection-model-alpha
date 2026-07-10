@@ -1,0 +1,39 @@
+{
+  "base_gguf": {
+    "filename": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+    "huggingface_repo": "lmstudio-community/Qwen3-4B-Instruct-2507-GGUF",
+    "huggingface_revision": "4edb920b6f14e3b9284d4502a6485103d72cde05",
+    "local_state": "not-downloaded",
+    "sha256": "8cdb57cbb880d313736a9bc4e3d3d2485f145b5e19cf33783746e753e82641fc",
+    "size_bytes": 2497280448
+  },
+  "evaluation": {
+    "adapter": {
+      "path": "runs/nebius-qwen3-4b-instruct-2507/eval.json",
+      "sha256": "687124ae45dbc1f723c3aaef04a059ba745809c5a9aa74224a090cdc77a19317",
+      "size_bytes": 12569
+    },
+    "base": {
+      "path": "runs/nebius-qwen3-4b-instruct-2507/base-eval.json",
+      "sha256": "37c7d1b63a570a87d1e7bc71511d04e3600f1f9942ceb64ce4822184a63a0e50",
+      "size_bytes": 40968
+    },
+    "training_log": {
+      "path": "runs/nebius-qwen3-4b-instruct-2507/training.log",
+      "sha256": "a45db1f7a0a761869a5092bcde2c8b9afe4c819cfdc322da132e5983295ff784",
+      "size_bytes": 63809
+    }
+  },
+  "lora": {
+    "gguf": {
+      "path": "runs/local-llama/tim-lora-f16.gguf",
+      "sha256": "298d177e43c8fc879a043ca888a23a3450eb0eeba3dc86e5cfbe9cff5be849c3",
+      "size_bytes": 66095520
+    },
+    "peft": {
+      "path": "adapters/nebius-qwen3-4b-instruct-2507/adapter_model.safetensors",
+      "sha256": "7c5b3675522335ebb7bf6a64f91c64a2e60dc9eaf7dd5c126634634ce8393117",
+      "size_bytes": 66127777
+    }
+  }
+}
