@@ -1,0 +1,15 @@
+.git
+.venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+adapters/*
+!adapters/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+runs/*
+!runs/.gitkeep

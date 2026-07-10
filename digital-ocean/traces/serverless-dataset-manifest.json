@@ -1,0 +1,25 @@
+{
+  "action_counts": { "continue": 175, "interject": 175, "respond": 176, "wait": 176 },
+  "created_at": "2026-07-09T23:52:30.559121+00:00",
+  "files": {
+    "data/train.jsonl": "bca66fd06fd742e6a2d6a36af49bfca542a8399d6de33dfe019a001e24af69c0",
+    "data/validation.jsonl": "8d7896501f023ad8d5967719eb768671f25dbf3caa951899843da37b611a4116"
+  },
+  "quality": {
+    "duplicate_rate": 0.0,
+    "invalid": 0,
+    "meta_rows": 0,
+    "placeholder_rows": 0,
+    "rows": 702,
+    "short_event_rate": 0.1339031339031339,
+    "short_target_rate": 0.0,
+    "unique_last_user_ratio": 0.8433048433048433,
+    "valid": 702
+  },
+  "source_sha256": "aa3f43ebdf377e27ea2ce87f68e0ef5a5d7fd24821075957fe49bd1e71f602d7",
+  "teacher_model": "qwen3.5-397b-a17b",
+  "timing_counts": { "delayed": 174, "instant": 177, "natural": 179, "quick": 172 },
+  "train": 598,
+  "validation": 104,
+  "validation_ratio": 0.15
+}

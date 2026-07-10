@@ -1,0 +1,14 @@
+{
+  "action_counts": { "continue": 4, "interject": 4, "respond": 4, "wait": 4 },
+  "created_at": "2026-07-09T18:42:37.076625+00:00",
+  "files": {
+    "data/train.jsonl": "abf0090a87dfc5a035517a3226c8d8ad06be77f7f2141a663697677ddcfec573",
+    "data/validation.jsonl": "1768f471652417687113dc200d3f180adb6fb6131ad376d847dc3ea47f520a71"
+  },
+  "source_sha256": "6601a1e0690673cc6ff0347fa7ec6c83cb2d361f03b0d1c43e69a0668bb17976",
+  "teacher_model": "qwen3.5-397b-a17b",
+  "timing_counts": { "delayed": 4, "instant": 4, "natural": 4, "quick": 4 },
+  "train": 12,
+  "validation": 4,
+  "validation_ratio": 0.15
+}
