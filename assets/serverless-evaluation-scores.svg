@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Base model and LoRA evaluation scores</title>
+  <desc id="desc">On the 40-case development suite, LoRA improves schema validity from 7.5 to 100 percent, action accuracy from 20 to 97.5 percent, and expected-content accuracy from 0 to 65.6 percent. The 95 percent release threshold is met for schema and action but not content.</desc>
+  <rect width="1200" height="680" fill="#ffffff"/>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #111827; }
+    .muted { fill: #64748b; }
+    .track { fill: #f1f5f9; }
+  </style>
+  <text x="70" y="48" font-size="26" font-weight="600">Base model vs LoRA</text>
+  <text x="70" y="72" font-size="14" class="muted">Fixed 40-case development suite · higher is better</text>
+
+  <line x1="1067" y1="105" x2="1067" y2="545" stroke="#dc2626" stroke-width="2" stroke-dasharray="7 7"/>
+  <text x="1057" y="98" text-anchor="end" font-size="13" fill="#b91c1c">95% release threshold</text>
+
+  <text x="70" y="158" font-size="17" font-weight="600">Schema validity</text>
+  <text x="70" y="190" font-size="13" class="muted">Base</text>
+  <rect x="180" y="174" width="934" height="22" rx="4" class="track"/>
+  <rect x="180" y="174" width="70" height="22" rx="4" fill="#94a3b8"/>
+  <text x="260" y="190" font-size="13">7.5%</text>
+  <text x="70" y="226" font-size="13" class="muted">LoRA</text>
+  <rect x="180" y="210" width="934" height="22" rx="4" class="track"/>
+  <rect x="180" y="210" width="934" height="22" rx="4" fill="#2563eb"/>
+  <text x="1104" y="226" text-anchor="end" font-size="13" fill="#ffffff">100.0%</text>
+
+  <text x="70" y="310" font-size="17" font-weight="600">Action accuracy</text>
+  <text x="70" y="342" font-size="13" class="muted">Base</text>
+  <rect x="180" y="326" width="934" height="22" rx="4" class="track"/>
+  <rect x="180" y="326" width="187" height="22" rx="4" fill="#94a3b8"/>
+  <text x="377" y="342" font-size="13">20.0%</text>
+  <text x="70" y="378" font-size="13" class="muted">LoRA</text>
+  <rect x="180" y="362" width="934" height="22" rx="4" class="track"/>
+  <rect x="180" y="362" width="911" height="22" rx="4" fill="#2563eb"/>
+  <text x="1081" y="378" text-anchor="end" font-size="13" fill="#ffffff">97.5%</text>
+
+  <text x="70" y="462" font-size="17" font-weight="600">Expected-content accuracy</text>
+  <text x="70" y="494" font-size="13" class="muted">Base</text>
+  <rect x="180" y="478" width="934" height="22" rx="4" class="track"/>
+  <text x="190" y="494" font-size="13">0.0%</text>
+  <text x="70" y="530" font-size="13" class="muted">LoRA</text>
+  <rect x="180" y="514" width="934" height="22" rx="4" class="track"/>
+  <rect x="180" y="514" width="613" height="22" rx="4" fill="#2563eb"/>
+  <text x="783" y="530" text-anchor="end" font-size="13" fill="#ffffff">65.6%</text>
+
+  <line x1="180" y1="574" x2="1114" y2="574" stroke="#94a3b8" stroke-width="1.25"/>
+  <text x="180" y="600" text-anchor="middle" font-size="13" class="muted">0%</text>
+  <text x="414" y="600" text-anchor="middle" font-size="13" class="muted">25%</text>
+  <text x="647" y="600" text-anchor="middle" font-size="13" class="muted">50%</text>
+  <text x="881" y="600" text-anchor="middle" font-size="13" class="muted">75%</text>
+  <text x="1114" y="600" text-anchor="middle" font-size="13" class="muted">100%</text>
+
+  <rect x="70" y="635" width="16" height="10" rx="2" fill="#94a3b8"/>
+  <text x="96" y="645" font-size="13" class="muted">base model</text>
+  <rect x="205" y="635" width="16" height="10" rx="2" fill="#2563eb"/>
+  <text x="231" y="645" font-size="13" class="muted">LoRA</text>
+  <text x="1130" y="645" text-anchor="end" font-size="13" class="muted">release blocked by completion quality</text>
+</svg>

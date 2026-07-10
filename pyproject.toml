@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiny-interjection-model-alpha"
+version = "0.1.0"
+description = "Tiny Interjection Model Alpha for small, important interaction tasks."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+  "accelerate>=1.0.0",
+  "bitsandbytes>=0.43.0; platform_system != 'Darwin'",
+  "datasets>=3.0.0",
+  "fastapi>=0.115.0",
+  "peft>=0.13.0",
+  "pydantic>=2.8.0",
+  "sentencepiece>=0.2.0",
+  "torch>=2.3.0",
+  "transformers>=4.53.0",
+  "trl>=1.8.0,<2.0.0",
+  "uvicorn>=0.30.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[project.scripts]
+interaction-data = "interaction_models.data:main"
+interaction-train = "interaction_models.train:main"
+interaction-eval = "interaction_models.eval:main"
+interaction-verify = "interaction_models.verify:main"
+interaction-cli = "interaction_models.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
