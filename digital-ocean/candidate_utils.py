@@ -65,7 +65,9 @@ def _role(raw: Any) -> str:
     return value
 
 
-def normalize_example(raw: dict[str, Any], *, source: str, case_id: str) -> dict[str, Any]:
+def normalize_example(
+    raw: dict[str, Any], *, source: str, case_id: str
+) -> dict[str, Any]:
     raw_events = raw.get("events") or raw.get("conversation") or raw.get("messages")
     if not isinstance(raw_events, list):
         raise ValueError("Missing events list.")
@@ -76,7 +78,9 @@ def normalize_example(raw: dict[str, Any], *, source: str, case_id: str) -> dict
             continue
         event: dict[str, Any] = {
             "role": _role(item.get("role") or item.get("speaker") or item.get("from")),
-            "text": _text(item.get("text") or item.get("content") or item.get("message")),
+            "text": _text(
+                item.get("text") or item.get("content") or item.get("message")
+            ),
             "dt_ms": int(float(item.get("dt_ms", item.get("delay_ms", 0)) or 0)),
         }
         if bool(item.get("partial", False)):
@@ -108,7 +112,9 @@ def normalize_example(raw: dict[str, Any], *, source: str, case_id: str) -> dict
     return example
 
 
-def validation_errors(example: dict[str, Any], expected_action: str | None = None) -> list[str]:
+def validation_errors(
+    example: dict[str, Any], expected_action: str | None = None
+) -> list[str]:
     errors: list[str] = []
     events = example.get("events")
     target = example.get("target")
@@ -173,7 +179,9 @@ def validation_errors(example: dict[str, Any], expected_action: str | None = Non
             errors.append("interject examples need a prior assistant event")
     if action == "continue":
         if last_role == "user" and last_text not in BACKCHANNELS:
-            errors.append("continue examples ending with user must end with a backchannel")
+            errors.append(
+                "continue examples ending with user must end with a backchannel"
+            )
         if not seen_assistant:
             errors.append("continue examples need a prior assistant event")
 
@@ -258,7 +266,10 @@ def format_training_text(events: list[dict[str, Any]], target: dict[str, Any]) -
         "<conversation>",
     ]
     for event in events:
-        attrs = [f'role="{html.escape(event["role"], quote=True)}"', f'dt_ms="{event["dt_ms"]}"']
+        attrs = [
+            f'role="{html.escape(event["role"], quote=True)}"',
+            f'dt_ms="{event["dt_ms"]}"',
+        ]
         if event.get("partial"):
             attrs.append('partial="true"')
         lines.append(f"<event {' '.join(attrs)}>{html.escape(event['text'])}</event>")
