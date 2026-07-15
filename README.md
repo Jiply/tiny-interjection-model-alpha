@@ -1,4 +1,8 @@
+![Tiny Interjection Model Alpha cover](assets/cover.png)
+
 # Tiny Interjection Model Alpha
+
+[Published Update](https://jeremysoojk.substack.com/p/tiny-interjection-model) | [Model](https://huggingface.co/jeremysoojk/tiny-interjection-model-alpha) | [Data](https://huggingface.co/datasets/jeremysoojk/tiny-interjection-model-alpha) | [Repo](https://github.com/Jiply/tiny-interjection-model-alpha)
 
 Tiny Interjection Model Alpha (TIM) explores a small floor-control model for typed chat. Given a timestamped event stream, the model decides whether an assistant should wait, respond, interject, or continue.
 
